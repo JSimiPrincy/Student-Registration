@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const port=4020;
 const db = mysql.createConnection({
-    host:'localhost',
-    user: 'root',
-    password: 'Princy@2003',
+    host:'',
+    user: '',
+    password: '',
     database: 'student_reg'
 });
 db.connect((err) => {
