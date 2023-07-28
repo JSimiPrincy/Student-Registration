@@ -1,0 +1,47 @@
+.d-container{
+    position: absolute;
+    background-image: url("../../assets/background-1.jpg");
+    width: 100%;
+    height: 120%;
+}
+.d-class {
+    position: absolute;
+    top: 40px;
+    width: auto;
+    left: 60px;
+    background-image: url("../../assets/background-1.jpg");
+    animation-name: fade-in-top;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    background-image: url("../../assets/background-1.jpg");
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  
+@keyframes fade-in-top {
+    0% { transform: translateY(-50px);opacity: 0;}
+    100% {transform: translateY(0);opacity: 1;}
+}

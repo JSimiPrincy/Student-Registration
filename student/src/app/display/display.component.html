@@ -1,0 +1,33 @@
+<div class="d-container">
+    <mat-card class="d-class">
+       <mat-card-content>
+        <div>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Roll No</th>
+                    <th>Fullname</th>
+                    <th>Email</th>
+                    <th>Date of Birt</th>
+                    <th>Phone</th>
+                    <th>Department</th>
+                    <th>College</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let student of students">
+                    <td>{{ student.roll_no}}</td>
+                    <td>{{ student.fullname }}</td>
+                    <td>{{ student.email}}</td>
+                    <td>{{ student.dob}}</td>
+                    <td>{{ student.phone_no}}</td>
+                    <td>{{ student.dept}}</td>
+                    <td>{{ student.clg}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+       </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,72 @@
+<div class="r-container">
+    <div>
+        <mat-card class="reg-class">
+            <mat-card-header class="r-head">Register Page</mat-card-header>
+            <br />
+            <br />
+               <mat-card-content>
+                <form #reg="ngForm">
+                    <mat-form-field class="full-width">
+                        <mat-label>Rollno</mat-label>
+                        <input matInput type="number" id="roll_no" ngModel name="roll_no" placeholder="Enter your registration no." required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Full Name <mat-icon>face</mat-icon></mat-label>
+                        <input matInput type="text" id="fullname" ngModel name="fullname" placeholder="Enter your name" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Email <mat-icon>email</mat-icon></mat-label>
+                        <input matInput type="email"id="email" ngModel name="email" placeholder="Enter your password" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Date of Birth</mat-label>
+                        <input matInput type="date" id="dob" ngModel name="dob" placeholder="dob" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Phone</mat-label>
+                        <input matInput type="number" id="phone_no" ngModel name="phone_no" placeholder="Phone no" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Department</mat-label>
+                        <input matInput type="text" id="dept" ngModel name="dept" placeholder="Enter your Department" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>College</mat-label>
+                        <input matInput type="text" id="clg" ngModel name="clg" placeholder="Enter name of college" required />
+                    </mat-form-field>
+                    <button mat-button class="register" (click)="register(reg)">Register</button>
+                    <button mat-button class="preview" (click)="togglePreview(reg)">Preview</button>
+                </form>
+               </mat-card-content>
+        </mat-card>
+    </div>
+    <div>
+        <mat-card class="p-card">
+            <mat-card-header>Preview</mat-card-header>
+            <br />
+            <br />
+            <div *ngIf="showPreview">
+                <span><strong>Roll Number : </strong>{{student.roll_no}}</span>
+                <br/>
+                <br />
+                <span><strong>Name : </strong>{{student.fullname}}</span>
+                <br/>
+                <br />
+                <span><strong>Email : </strong>{{student.email}}</span>
+                <br/>
+                <br />
+                <span><strong>Mobile : </strong>{{student.phone_no}}</span>
+                <br/>
+                <br />
+                <span><strong>Department : </strong>{{student.dept}}</span>
+                <br/>
+                <br />
+                <span><strong>College : </strong>{{student.clg}}</span>
+                <br/>
+                <br />
+                <span><strong>Date of birth : </strong>{{student.dob}}</span>
+            </div>
+        </mat-card>
+    </div>
+</div>
+
